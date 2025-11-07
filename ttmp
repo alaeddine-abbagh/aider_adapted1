@@ -1,38 +1,49 @@
-Subject: Current status and next steps — Compliance AI initiatives
+Objet : Point d’avancement et prochaines étapes — IA conformité
 
-Hi [Manager Name],
+Bonjour [Prénom Nom],
 
-Here’s a concise update on the current situation and proposed next steps:
+Voici un résumé concis de la situation actuelle et des actions proposées.
 
-- Client summary generation (Lot 1)
-    - Auto-generate per‑alert client syntheses from UGO/HUGO via Domino.
-    - Estimated gain ~4 minutes per dossier, ~26k dossiers/year. Initial ROI ~1–2 FTE across FR/PT. Data structure is ready and clean.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Automated comment drafting (Lot 2)
-    - AI drafts analyst comments for LOD1 alerts. Analyst reviews/edits before submission. Larger gains expected on reinforced reviews (0.74 FTE estimate).[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Architecture and data flow
-    - UGO/HUGO sends JSON to Domino. Domino returns results to a dedicated table for UI display. No direct writes to prod. Three test environments available.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Confidentiality approach
-    - Avoid names in LLM context. HUGO adds names post‑generation. Sensitive flags handled generically (e.g., “client has a sensitivity”).[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Procedures chatbot (RAG)
-    - Current behavior over‑focuses on a single document and over‑summarizes. Plan to adjust retrieval breadth and prompting. Potential uplift with stronger model if justified.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- IG reports summarization via Power Automate / Copilot
-    - PA flow demoed end‑to‑end; Copilot license availability under discussion. Option: Domino reads SharePoint PDFs and returns syntheses back to tracking lists.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Access and modeling
-    - Domino Cardiff access requested for specific projects. Existing classic models in place (LR, RF, XGBoost) with interest in selective GenAI testing on transactions.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
+- Génération de synthèses client (Lot 1)
+    - Synthèses automatiques par alerte à partir d’UGO/HUGO via Domino
+    - Gain estimé ~4 minutes par dossier, ~26 000 dossiers/an
+    - ROI attendu : ~1–2 ETP selon périmètre France/Portugal
+- Rédaction assistée des commentaires (Lot 2)
+    - Proposition de commentaire par l’IA pour LOD1
+    - Relecture/édition par l’analyste
+    - Gains les plus marqués sur les examens renforcés
+- Architecture et données
+    - Flux UGO/HUGO → JSON → Domino → table dédiée pour affichage
+    - Pas d’écriture directe en production
+    - Trois environnements de test disponibles
+- Confidentialité
+    - Pas de noms en contexte modèle
+    - Ajout des noms côté HUGO après génération
+    - Gestion générique des sensibilités
+- Chatbot procédures (RAG)
+    - Tendance à se focaliser sur un seul document et à trop résumer
+    - Prévu : élargir la récupération et affiner le prompt
+    - Modèle plus performant possible si justifié
+- Synthèse des rapports IG
+    - Chaîne Power Automate démontrée de bout en bout
+    - Option de lecture des PDF sur SharePoint par Domino et retour en liste de suivi
+    - Statut licences Copilot en discussion
+- Accès et modélisation
+    - Demande d’accès Domino Cardif pour projets ciblés
+    - Modèles classiques en place (LR, RF, XGBoost)
+    - Tests ciblés GenAI envisagés sur transactions
 
-Proposed next steps
+Prochaines étapes
 
-- Submit Lots 1–2 to the committee for validation and budget gating.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Share the comment structure/rules to lock prompt and output format.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Provide ROI estimate for the procedures project and confirm model choice.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Confirm Domino–SharePoint connectivity for IG pipeline.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Provide rapid update on the IG topic and Copilot license status.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
-- Size the HUGO–Domino integration effort and timeline.[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
+- Soumettre Lots 1–2 au comité pour validation et budget
+- Partager la trame/règles des commentaires pour verrouiller le format
+- Chiffrer le ROI du projet procédures et confirmer le modèle cible
+- Confirmer la connectivité Domino–SharePoint pour le pipeline IG
+- Fournir une mise à jour rapide sur le sujet IG et l’état des licences Copilot
+- Estimer charge et planning d’intégration HUGO–Domino
 
-Happy to tailor the ROI breakdown or a brief deck for the committee.
+Je peux préparer un bref support ROI pour le comité si besoin.
 
-Best regards,
+Bien cordialement,
 
 MathWisdom
-
-[[1]](https://www.notion.so/Cardif-2844c5258b4b8091b124fede73931eda?pvs=21)
